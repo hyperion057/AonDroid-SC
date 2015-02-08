@@ -63,15 +63,15 @@ var app = {
 // create table and insert some record
 function populateDB(tx) {
 	console.log("Entered in populateDB method");
-	   tx.executeSql('CREATE TABLE IF NOT EXISTS countries (id INTEGER PRIMARY KEY AUTOINCREMENT, code TEXT NOT NULL,population TEXT NOT NULL,country TEXT NOT NULL)');
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("IN","1,239,200,000","INDIA")'); 
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("AU","23,352,213","AUSTRALIA")'); 
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("US","317,500,000","UNITED STATES OF AMERICA")');
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("CN","1,362,290,000","CHINA")'); 
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("RU","143,600,000","RUSSIAN FEDERATION")');
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("UK","63,705,000","UNITED KINGDOM")'); 
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("CA","35,295,770","CANADA")'); 
-	   tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("GL", "56,370","GREENLAND")');
+	 // tx.executeSql('CREATE TABLE IF NOT EXISTS countries (id INTEGER PRIMARY KEY AUTOINCREMENT, code TEXT NOT NULL,population TEXT NOT NULL,country TEXT NOT NULL)');
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("IN","1,239,200,000","INDIA")'); 
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("AU","23,352,213","AUSTRALIA")'); 
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("US","317,500,000","UNITED STATES OF AMERICA")');
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("CN","1,362,290,000","CHINA")'); 
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("RU","143,600,000","RUSSIAN FEDERATION")');
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("UK","63,705,000","UNITED KINGDOM")'); 
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("CA","35,295,770","CANADA")'); 
+	 // tx.executeSql('INSERT INTO countries(code,population,country) VALUES ("GL", "56,370","GREENLAND")');
 	console.log("Exiting populateDB method");
 }
 
@@ -89,7 +89,7 @@ function successCB() {
 // select all from SoccerPlayer
 function queryDB(tx) {
 	console.log('querying db for countries');
-	tx.executeSql('SELECT * FROM countries',[],queryListCountriesSuccess,errorCB);
+	//tx.executeSql('SELECT * FROM countries',[],queryListCountriesSuccess,errorCB);
 }
 
 function queryListCountriesSuccess(tx, result) {
